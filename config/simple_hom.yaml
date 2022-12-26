@@ -1,0 +1,39 @@
+name: "simple_hom"
+exp: 1
+
+env_config:
+  static: true
+
+# task
+task_config:
+  num: [15,15]
+  type: ["visit"]
+
+# vehicle
+vehicle_config:
+  num: [5,5]
+  type: ["uav_1"]
+  uav_1:
+    velocity: 1.0
+    task: ["visit"]
+
+
+# model
+model_config:
+  embedding_dim: 128
+  tanh_clipping: 10.0
+
+# training
+load_model: false
+device: "cpu"
+
+lr: 1.0e-5
+lr_decay: 1
+lr_decay_step: 1024
+
+update_baseline: 1024
+
+# log
+tensorboard_batch: 256
+
+seed: 100

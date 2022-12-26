@@ -1,0 +1,7 @@
+num_gpu: 0
+
+num_worker: 8
+epi_per_worker: 8
+
+num_test_worker: 12
+test_set_num: 1024

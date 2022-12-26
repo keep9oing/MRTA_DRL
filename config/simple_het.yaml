@@ -1,0 +1,41 @@
+name: "simple_het"
+exp: 1
+
+env_config:
+  static: true
+
+# task
+task_config:
+  num: [5,50]
+  type: ["visit"]
+
+# vehicle
+vehicle_config:
+  num: [1,10]
+  type: ["uav_1", "uav_2"]
+  uav_1:
+    velocity: 1.0
+    task: ["visit"]
+  uav_2:
+    velocity: 0.5
+    task: ["visit"]
+
+# model
+model_config:
+  embedding_dim: 128
+  tanh_clipping: 10.0
+
+# training
+load_model: false
+device: "cpu"
+
+lr: 1.0e-5
+lr_decay: 1.0
+lr_decay_step: 128
+
+update_baseline: 1024
+
+# log
+tensorboard_batch: 512
+
+seed: 100
